@@ -1,8 +1,11 @@
 {
   "name": "puppy-fetch",
   "version": "1.0.7",
-  "description": "",
-  "keywords": [],
+  "description": "A small wrapper for the Fetch API that uses the AbortController interface to cancel in-flight fetch requests.",
+  "keywords": [
+    "fetch",
+    "abort"
+  ],
   "homepage": "https://github.com/dankreiger/puppy-fetch#readme",
   "bugs": {
     "url": "https://github.com/dankreiger/puppy-fetch/issues"
