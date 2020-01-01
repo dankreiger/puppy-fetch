@@ -18,10 +18,11 @@
   "scripts": {
     "build": "tsc",
     "demo": "tar tvf $(npm pack)",
-    "prepublish": "npm test",
+    "prepublish": "npm run build && npm test",
     "sort": "sort-package-json",
     "test": "jest --config=jest.config.json",
     "test:watch": "npm test -- --watchAll",
+    "preversion": "npm run prepublish",
     "postversion": "git push && git push --tags"
   },
   "husky": {
@@ -35,9 +36,6 @@
       "prettier --write",
       "git add"
     ]
-  },
-  "dependencies": {
-    "abortcontroller-polyfill": "1.4.0"
   },
   "devDependencies": {
     "@commitlint/cli": "8.2.0",

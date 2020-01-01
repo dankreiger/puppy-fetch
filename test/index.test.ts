@@ -1,4 +1,4 @@
-import puppyFetch from '../src';
+import puppyFetch from '../dist';
 
 describe('puppyFetch', () => {
   const woofGlobal = global as any;

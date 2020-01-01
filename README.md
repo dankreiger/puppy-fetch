@@ -51,3 +51,20 @@ yarn add puppy-fetch
    ```
 
 Requests with the same unique identifier will be automatically aborted.
+
+---
+
+You can polyfill older browsers by running:
+
+```sh
+npm install --save abortcontroller-polyfill
+```
+
+and then importing the polyfill above your `puppy-fetch` import:
+
+```js
+import 'abortcontroller-polyfill/dist/abortcontroller-polyfill-only';
+import puppyFetch from 'puppy-fetch';
+```
+
+See https://www.npmjs.com/package/abortcontroller-polyfill for more information.

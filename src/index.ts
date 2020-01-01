@@ -1,5 +1,3 @@
-import 'abortcontroller-polyfill/dist/abortcontroller-polyfill-only';
-
 type PuppyFetch = (
   id: string,
   uri: Request | string,
