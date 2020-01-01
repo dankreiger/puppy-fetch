@@ -2,3 +2,4 @@ tsconfig.json
 jest.config.json
 .nvmrc
 test/
+.travis.yml
