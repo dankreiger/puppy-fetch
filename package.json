@@ -3,25 +3,55 @@
   "version": "1.0.2",
   "description": "",
   "keywords": [],
+  "homepage": "https://github.com/dankreiger/puppy-fetch#readme",
+  "bugs": {
+    "url": "https://github.com/dankreiger/puppy-fetch/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dankreiger/puppy-fetch.git"
+  },
   "license": "ISC",
   "author": "Dan Kreiger <dan@dankreiger.com> (http://www.dankreiger.com/)",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "prepublish": "npm test",
+    "demo": "tar tvf $(npm pack)",
+    "lint": "tslint -p tsconfig.json",
+    "prepublish": "npm run sort && npm test",
+    "sort": "sort-package-json",
     "test": "jest --config=jest.config.json",
-    "test:watch": "npm test -- --watchAll"
+    "test:watch": "npm test -- --watchAll",
+    "preversion": "npm run lint"
   },
-  "prepublish": "tsc",
-  "devDependencies": {
-    "@types/jest": "24.0.25",
-    "@types/node": "13.1.2",
-    "jest": "24.9.0",
-    "ts-jest": "24.2.0",
-    "typescript": "3.7.4"
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,tsx,jsx,json,css}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "dependencies": {
     "abortcontroller-polyfill": "1.4.0"
-  }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "8.2.0",
+    "@commitlint/config-conventional": "8.2.0",
+    "@types/jest": "24.0.25",
+    "@types/node": "13.1.2",
+    "husky": "3.1.0",
+    "jest": "24.9.0",
+    "lint-staged": "9.5.0",
+    "prettier": "1.19.1",
+    "sort-package-json": "1.35.0",
+    "ts-jest": "24.2.0",
+    "typescript": "3.7.4"
+  },
+  "prepublish": "tsc"
 }

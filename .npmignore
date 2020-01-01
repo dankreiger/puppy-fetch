@@ -1,5 +1,8 @@
+node_modules
 tsconfig.json
 jest.config.json
 .nvmrc
-test/
+test
+src
 .travis.yml
+commitlint.config.js
