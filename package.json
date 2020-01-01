@@ -18,12 +18,10 @@
   "scripts": {
     "build": "tsc",
     "demo": "tar tvf $(npm pack)",
-    "lint": "tslint -p tsconfig.json",
     "prepublish": "npm run sort && npm test",
     "sort": "sort-package-json",
     "test": "jest --config=jest.config.json",
-    "test:watch": "npm test -- --watchAll",
-    "preversion": "npm run lint"
+    "test:watch": "npm test -- --watchAll"
   },
   "husky": {
     "hooks": {
