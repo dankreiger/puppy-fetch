@@ -2,6 +2,8 @@
 
 A small wrapper for the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) that uses the [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController) interface to cancel in-flight fetch requests.
 
+Using `puppy-fetch` helps by making repeated `fetch` calls abortable by default. This is especially helpful for speeding up the UX for users with a slower internet connection.
+
 [![Build Status](https://travis-ci.org/dankreiger/puppy-fetch.svg?branch=master)](https://travis-ci.org/dankreiger/puppy-fetch)
 
 ### Install
@@ -68,3 +70,9 @@ import puppyFetch from 'puppy-fetch';
 ```
 
 See https://www.npmjs.com/package/abortcontroller-polyfill for more information.
+
+---
+
+More info:
+
+Aborting an instance of a finished request does nothing, and therefore is [fine to do](https://developers.google.com/web/updates/2017/09/abortable-fetch).
