@@ -29,5 +29,7 @@ describe('puppyFetch', () => {
 
     puppyFetch('unique_woof', 'http://www.woof.com');
     expect(woofGlobal.fetch).toHaveBeenCalledTimes(2);
+
+    // TODO: finish this test
   });
 });
