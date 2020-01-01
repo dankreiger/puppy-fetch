@@ -1,0 +1,27 @@
+{
+  "name": "puppy-fetch",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "license": "ISC",
+  "author": "Dan Kreiger <dan@dankreiger.com> (http://www.dankreiger.com/)",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepublish": "npm test",
+    "test": "jest --config=jest.config.json",
+    "test:watch": "npm test -- --watchAll"
+  },
+  "prepublish": "tsc",
+  "devDependencies": {
+    "@types/jest": "24.0.25",
+    "@types/node": "13.1.2",
+    "jest": "24.9.0",
+    "ts-jest": "24.2.0",
+    "typescript": "3.7.4"
+  },
+  "dependencies": {
+    "abortcontroller-polyfill": "1.4.0"
+  }
+}
