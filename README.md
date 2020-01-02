@@ -6,6 +6,8 @@ Using `puppy-fetch` helps by making repeated `fetch` calls abortable by default.
 
 [![Build Status](https://travis-ci.org/dankreiger/puppy-fetch.svg?branch=master)](https://travis-ci.org/dankreiger/puppy-fetch)
 
+[![Edit puppy-fetch](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/objective-varahamihira-hc7py?fontsize=14&hidenavigation=1&theme=dark)
+
 ### Install
 
 ```sh
