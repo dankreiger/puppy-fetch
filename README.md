@@ -29,17 +29,17 @@ yarn add puppy-fetch
 2. Give `puppyFetch` a unique identifier, and then use it just like you would use the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch).
 
    ```js
-   const TODOS_RESOURCE_ID = 'TODOS_RESOURCE_ID';
-   const POSTS_RESOURCE_ID = 'POSTS_RESOURCE_ID';
+   const some_unique_string = 'some_unique_string';
+   const another_unique_string = 'another_unique_string';
 
    // GET EXAMPLE
    puppyFetch(
-     TODOS_RESOURCE_ID,
+     some_unique_string,
      'https://jsonplaceholder.typicode.com/todos/1'
    );
 
    // POST EXAMPLE
-   puppyFetch(POSTS_RESOURCE_ID, 'https://jsonplaceholder.typicode.com/posts', {
+   puppyFetch(another_unique_string, 'https://jsonplaceholder.typicode.com/posts', {
      method: 'POST',
      body: JSON.stringify({
        title: 'foo',
