@@ -40,7 +40,7 @@ yarn add puppy-fetch
      'https://jsonplaceholder.typicode.com/todos/1'
    );
 
-   // POST EXAMPLE
+   // POST EXAMPLE (note, when aborting, you should not mutate information on the server)
    puppyFetch(another_unique_string, 'https://jsonplaceholder.typicode.com/posts', {
      method: 'POST',
      body: JSON.stringify({
